@@ -21,7 +21,7 @@ public class Test2 {
 
     public void TestBraces() {
         {
-            System.out.println("试试小括号");
+            System.out.println("A");
             System.out.println("试错了,妈的");
         }
         {
