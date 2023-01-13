@@ -22,7 +22,7 @@ public class Test2 {
     public void TestBraces() {
         {
             System.out.println("A");
-            System.out.println("试错了,妈的");
+            System.out.println("B");
         }
         {
             System.out.println("试试小括号");
