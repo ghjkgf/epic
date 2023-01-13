@@ -18,4 +18,13 @@ public class Test2 {
         System.out.println("修改同一方法");
         return a-b;
     }
+
+    public void TestBraces() {
+        {
+            System.out.println("我在第一个大括号");
+        }
+        {
+            System.out.println("我在第二个大括号");
+        }
+    }
 }
