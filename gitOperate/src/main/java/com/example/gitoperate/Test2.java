@@ -12,7 +12,7 @@ public class Test2 {
     }
 
     public static int add(int a,int b){
-        return a+b;
+        return a+b>0 ? a+b : 0;
     }
     public static int diff(int a,int b){
         return a-b>0?a-b:b-a;
