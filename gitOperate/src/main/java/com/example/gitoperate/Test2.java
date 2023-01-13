@@ -15,6 +15,7 @@ public class Test2 {
         return a+b>0 ? a+b : 0;
     }
     public static int diff(int a,int b){
+        System.out.println("修改同一方法");
         return a-b;
     }
 }
