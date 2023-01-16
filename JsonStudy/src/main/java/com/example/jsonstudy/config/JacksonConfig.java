@@ -1,4 +1,4 @@
-package com.example.jsonstudy;
+package com.example.jsonstudy.config;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;
@@ -34,17 +34,5 @@ public class JacksonConfig {
             }
         });
         return objectMapper;
-    }
-
-    /**
-     * bean中 date 类型很多时
-     */
-    @Bean
-    MappingJackson2HttpMessageConverter mappingJackson2HttpMessageConverter(){
-        MappingJackson2HttpMessageConverter converter = new MappingJackson2HttpMessageConverter();
-        ObjectMapper objectMapper = new ObjectMapper();
-        objectMapper.setDateFormat(new SimpleDateFormat("yyyy-MM-dd"));
-        converter.setObjectMapper(objectMapper);
-        return converter;
     }
 }
