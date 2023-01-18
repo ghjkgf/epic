@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Created-By: IntelliJ IDEA
+Built-By: DBHS
+Build-Jdk: Amazon Corretto version 17.0.5
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.ethon.world
+Main-Class: ${start-class}
+
