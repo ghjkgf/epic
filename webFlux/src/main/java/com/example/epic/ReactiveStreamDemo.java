@@ -41,12 +41,14 @@ public class ReactiveStreamDemo {
         publisher.subscribe(subscriber);
 
         publisher.submit("hello reactive stream");
-
+        publisher.close();
         // 主线程做一个阻塞
         try {
-            Thread.currentThread().join();
+            Thread.currentThread().join(1000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+
+
     }
 }
