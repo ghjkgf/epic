@@ -1,0 +1,12 @@
+<resultMap id="BaseResultMap" type="com.cskaoyan.pojo.Custom">
+	<id column="custom_id" jdbcType="VARCHAR" property="customId"/>
+		<result column="custom_name" jdbcType="VARCHAR" property="customName"/>
+			<result column="full_name" jdbcType="VARCHAR" property="fullName"/>
+				<result column="address" jdbcType="VARCHAR" property="address"/>
+					<result column="fax" jdbcType="VARCHAR" property="fax"/>
+						<result column="email" jdbcType="VARCHAR" property="email"/>
+							<result column="owner_name" jdbcType="VARCHAR" property="ownerName"/>
+								<result column="owner_tel" jdbcType="VARCHAR" property="ownerTel"/>
+									<result column="status" jdbcType="INTEGER" property="status"/>
+										<result column="note" jdbcType="VARCHAR" property="note"/>
+											</resultMap>
