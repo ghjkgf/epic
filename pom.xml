@@ -5,6 +5,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>tomcat</module>
+        <module>Reflect</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
