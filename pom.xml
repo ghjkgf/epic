@@ -6,6 +6,8 @@
     <modules>
         <module>tomcat</module>
         <module>Reflect</module>
+        <module>util</module>
+        <module>javaFX</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
