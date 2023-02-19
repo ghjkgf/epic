@@ -10,7 +10,12 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+import java.util.function.Predicate;
+import java.util.function.ToIntFunction;
+import java.util.stream.Collectors;
 
 /**
  * @author zsl
@@ -72,6 +77,13 @@ public class ExcelUtils {
         Class<?> clazz = dataList.get(0).getClass();
         // get obj.property by class file
         Field[] fields = clazz.getDeclaredFields();
+        // filter doesn't need
+        List<Field> fieldList = Arrays.asList(fields).stream().filter(field -> field.isAnnotationPresent(ExcelNeed.class)).collect(Collectors.toList());
+        // sort the attributes
+        fieldList = fieldList.stream().sorted(Comparator.comparingInt(value -> value.getAnnotation(ExcelNeed.class).order())).collect(Collectors.toList());
+        // 只使用toArray() 转换数组报异常
+        fields = fieldList.toArray(new Field[0]);
+
         // get value
         ArrayList<String> list;
         for (int i = 0; i < dataList.size(); i++) {

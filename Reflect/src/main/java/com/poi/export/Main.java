@@ -7,6 +7,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * @author zsl
@@ -35,10 +36,12 @@ public class Main {
         FileOutputStream fos = new FileOutputStream("D:/data2.xlsx");
 
         List<String> columnList = new ArrayList<>();
-        columnList.add("name");
+        // 列也应该根据注解选择
+        // columnList.add("id");
         columnList.add("score");
-        Student ghjkgf = new Student("ghjkgf", "95");
-        Student nanke = new Student("nanke", "98");
+        columnList.add("name");
+        Student ghjkgf = new Student(UUID.randomUUID().toString(),"ghjkgf", "95");
+        Student nanke = new Student(UUID.randomUUID().toString(),"nanke", "98");
         ArrayList<Student> students = new ArrayList<>();
         students.add(ghjkgf);
         students.add(nanke);
