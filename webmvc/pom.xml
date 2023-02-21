@@ -27,6 +27,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- soap  -->
+        <dependency>
+            <groupId>com.xkcoding</groupId>
+            <artifactId>soap-builder</artifactId>
+            <version>0.0.2</version>
+        </dependency>
     </dependencies>
 
     <build>
